@@ -1,2 +1,2 @@
-# notes
-A pile of notes
+# Glyphctl
+A pile of glyphs
