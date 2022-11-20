@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "1b46dc42605b56b2",
+    "type": "split",
+    "children": [
+      {
+        "id": "9adf87c3c8febe1e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c8c920e40d46534",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docker/Remove <none> Image.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "341bd200186982d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docker/Remove <none> Image.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "19cbf4769dd6f4c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "69d6d1505d41cd34",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eab01d5ea2e13495",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "07b44d0cb9f85015",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a5f31315520e7dbb",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "444c631ffd08f84d",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa24d673006aff8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a5e7bfc693c9159",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Docker/Remove <none> Image.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "195b5f5cb0e18c3c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Docker/Remove <none> Image.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2b6b0bcc67468d49",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ccab79548f799e14",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Docker/Remove <none> Image.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "341bd200186982d5",
+  "lastOpenFiles": [
+    "Python/Empty file *.ipynb.md",
+    "Docker/Remove <none> Image.md",
+    "Docker/Static IP.md"
+  ]
+}
