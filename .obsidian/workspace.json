@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Command Line Interface/xrandr.md",
+                "file": "Ubuntu/APT Deprecation GPG Key.md",
                 "mode": "preview",
                 "source": true
               }
@@ -89,6 +89,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "24a987b353d90ad7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -110,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Command Line Interface/xrandr.md",
+                "file": "Ubuntu/APT Deprecation GPG Key.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Command Line Interface/xrandr.md",
+                "file": "Ubuntu/APT Deprecation GPG Key.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Command Line Interface/xrandr.md"
+                "file": "Ubuntu/APT Deprecation GPG Key.md"
               }
             }
           }
@@ -173,8 +181,10 @@
   },
   "active": "e9d94610a3e12ff1",
   "lastOpenFiles": [
-    "Command Line Interface/nmcli.md",
     "Command Line Interface/xrandr.md",
+    "Ubuntu/APT Deprecation GPG Key.md",
+    "Ubuntu",
+    "Command Line Interface/nmcli.md",
     "Rust/Rust on Fish Shell.md",
     "README.md",
     "Docker/Remove <none> Image.md",
