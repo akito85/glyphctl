@@ -13,20 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Ignore File System Changes.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "511d3bed7c4bec7e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust/Rust on Fish Shell.md",
-                "mode": "source",
+                "file": "Projects/MTAJ/Docker Compose Setup.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -105,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Ignore File System Changes.md",
+                "file": "Projects/MTAJ/Docker Compose Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Ignore File System Changes.md",
+                "file": "Projects/MTAJ/Docker Compose Setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Ignore File System Changes.md"
+                "file": "Projects/MTAJ/Docker Compose Setup.md"
               }
             }
           }
@@ -166,20 +154,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eab01d5ea2e13495",
+  "active": "68e9c38f709eaf0d",
   "lastOpenFiles": [
+    "Projects/BRIDEX/Docker Compose Setup.md",
+    "Projects/MTAJ/Docker Compose Setup.md",
     "PRODUCTIVITY.md",
-    "Rust/Rust on Fish Shell.md",
+    "Projects/MTAJ",
     "Git/Ignore File System Changes.md",
+    "Ubuntu/Install KVM + Qemu.md",
+    "Projects/BRISMA",
+    "Projects/BRISMA.md",
+    "Projects/BRIDEX/PM2 Ecosystem Config.md",
+    "Rust/Rust on Fish Shell.md",
+    "Projects/BRIDEX",
+    "Projects",
+    "Untitled",
+    "Ubuntu/APT Deprecation GPG Key.md",
     "Docker/Permission Denied Docker Unix Socket.md",
     "Git",
     "Docker/Remove <none> Image.md",
     "README.md",
     "Command Line Interface/nmcli.md",
-    "Ubuntu/APT Deprecation GPG Key.md",
     "Command Line Interface/xrandr.md",
     "Ubuntu",
-    "NodeJS/PM2 Ecosystem Config.md",
     "Python/Empty file *.ipynb.md",
     "Docker/Static IP.md"
   ]

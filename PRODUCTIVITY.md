@@ -1,5 +1,22 @@
 This is my productivity configuration
+<br/>
 
+FISH
+===
+
+**Install Fish**
+```
+I use deb package from ubuntu port (not via apt, **outdated**)
+```
+
+**Install Fish base utility**
+```
+1. Fisher
+2. Exa
+3. Fzf
+4. Nvm
+```
+___
 
 RUST
 ===
@@ -32,20 +49,18 @@ set -Ua fish_user_paths $HOME/.cargo/bin
 14. 
 15. Procs
 ```
+___
 
-
-FISH
+PYTHON
 ===
 
 **Install Fish**
 ```
-I use deb package from ubuntu port (not via apt, **outdated**)
+sudo apt install python3 python3-pip
 ```
 
-**Install Fish base utility**
+**Install Python base utility**
 ```
-1. Fisher
-2. Exa
-3. Fzf
-4. Nvm
+1. Bpytop
+2. Ranger-fm
 ```
