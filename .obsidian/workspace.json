@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2259f045fec39a12",
+        "id": "30290023aebd713a",
         "type": "tabs",
         "children": [
           {
-            "id": "68e9c38f709eaf0d",
+            "id": "bf0fcb83127eadd0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/MTAJ/Docker Compose Setup.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 419.5
   },
   "right": {
     "id": "444c631ffd08f84d",
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/MTAJ/Docker Compose Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/MTAJ/Docker Compose Setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Projects/MTAJ/Docker Compose Setup.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -154,30 +146,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "68e9c38f709eaf0d",
+  "active": "bf0fcb83127eadd0",
   "lastOpenFiles": [
-    "Projects/BRIDEX/Docker Compose Setup.md",
-    "Projects/MTAJ/Docker Compose Setup.md",
     "PRODUCTIVITY.md",
-    "Projects/MTAJ",
+    "Ubuntu/APT Deprecation GPG Key.md",
+    "Ubuntu/Install Forticlient.md",
+    "Pasted image 20230715212142.png",
+    "Projects/MTAJ/Docker Compose Setup.md",
     "Git/Ignore File System Changes.md",
-    "Ubuntu/Install KVM + Qemu.md",
+    "Docker/Remove none Image.md",
+    "Docker/Backup and Restore PostgreSQL.md",
+    "Rust/Rust on Fish Shell.md",
+    "Ubuntu/Install KVM and Qemu.md",
+    "Python/Empty file .ipynb.md",
+    "Command Line Interface/xrandr.md",
+    "Command Line Interface/nmcli.md",
+    "Docker/Static IP.md",
+    "Docker/Permission Denied Docker Unix Socket.md",
+    "Projects/BRIDEX/Docker Compose Setup.md",
+    "Projects/MTAJ",
     "Projects/BRISMA",
     "Projects/BRISMA.md",
     "Projects/BRIDEX/PM2 Ecosystem Config.md",
-    "Rust/Rust on Fish Shell.md",
     "Projects/BRIDEX",
     "Projects",
     "Untitled",
-    "Ubuntu/APT Deprecation GPG Key.md",
-    "Docker/Permission Denied Docker Unix Socket.md",
     "Git",
-    "Docker/Remove <none> Image.md",
     "README.md",
-    "Command Line Interface/nmcli.md",
-    "Command Line Interface/xrandr.md",
-    "Ubuntu",
-    "Python/Empty file *.ipynb.md",
-    "Docker/Static IP.md"
+    "Ubuntu"
   ]
 }

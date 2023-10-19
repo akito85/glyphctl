@@ -1,6 +1,5 @@
 `nmcli connection up <Device/SSID> --ask`
 
-<br/>
 
 Lets break down
 --
