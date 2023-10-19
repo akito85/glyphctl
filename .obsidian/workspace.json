@@ -11,8 +11,12 @@
             "id": "bf0fcb83127eadd0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Docker/Remove none Image.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Docker/Remove none Image.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Docker/Remove none Image.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Docker/Remove none Image.md"
+              }
             }
           }
         ]
@@ -148,21 +156,22 @@
   },
   "active": "bf0fcb83127eadd0",
   "lastOpenFiles": [
+    "2023-10-19.md",
+    "Docker/Remove none Image.md",
+    "Docker/Permission Denied Docker Unix Socket.md",
+    "Docker/Backup and Restore PostgreSQL.md",
+    "Command Line Interface/xrandr.md",
+    "Command Line Interface/nmcli.md",
     "PRODUCTIVITY.md",
     "Ubuntu/APT Deprecation GPG Key.md",
     "Ubuntu/Install Forticlient.md",
     "Pasted image 20230715212142.png",
     "Projects/MTAJ/Docker Compose Setup.md",
     "Git/Ignore File System Changes.md",
-    "Docker/Remove none Image.md",
-    "Docker/Backup and Restore PostgreSQL.md",
     "Rust/Rust on Fish Shell.md",
     "Ubuntu/Install KVM and Qemu.md",
     "Python/Empty file .ipynb.md",
-    "Command Line Interface/xrandr.md",
-    "Command Line Interface/nmcli.md",
     "Docker/Static IP.md",
-    "Docker/Permission Denied Docker Unix Socket.md",
     "Projects/BRIDEX/Docker Compose Setup.md",
     "Projects/MTAJ",
     "Projects/BRISMA",
