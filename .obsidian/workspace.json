@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "30290023aebd713a",
+        "id": "8b001664b36eed74",
         "type": "tabs",
         "children": [
           {
-            "id": "bf0fcb83127eadd0",
+            "id": "6291f908b04ea1dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/Remove none Image.md",
-                "mode": "source",
+                "file": "Git/Ignore Line Endings.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419.5
+    "width": 360.5
   },
   "right": {
     "id": "444c631ffd08f84d",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker/Remove none Image.md",
+                "file": "Git/Ignore Line Endings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker/Remove none Image.md",
+                "file": "Git/Ignore Line Endings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker/Remove none Image.md"
+                "file": "Git/Ignore Line Endings.md"
               }
             }
           }
@@ -154,20 +154,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf0fcb83127eadd0",
+  "active": "6291f908b04ea1dd",
   "lastOpenFiles": [
-    "2023-10-19.md",
+    "Git/Ignore File System Changes.md",
+    "Git/Ignore Line Endings.md",
+    "Windows/Ctrl Space Was Not Sent to Emulator.md",
+    "PRODUCTIVITY.md",
+    "Windows",
+    "Vmware/Mounting Windows Sharing Folder to Guest OS Linux.md",
+    "Vmware",
     "Docker/Remove none Image.md",
+    "2023-10-19.md",
     "Docker/Permission Denied Docker Unix Socket.md",
     "Docker/Backup and Restore PostgreSQL.md",
     "Command Line Interface/xrandr.md",
     "Command Line Interface/nmcli.md",
-    "PRODUCTIVITY.md",
     "Ubuntu/APT Deprecation GPG Key.md",
     "Ubuntu/Install Forticlient.md",
     "Pasted image 20230715212142.png",
     "Projects/MTAJ/Docker Compose Setup.md",
-    "Git/Ignore File System Changes.md",
     "Rust/Rust on Fish Shell.md",
     "Ubuntu/Install KVM and Qemu.md",
     "Python/Empty file .ipynb.md",
@@ -179,7 +184,6 @@
     "Projects/BRIDEX/PM2 Ecosystem Config.md",
     "Projects/BRIDEX",
     "Projects",
-    "Untitled",
     "Git",
     "README.md",
     "Ubuntu"
