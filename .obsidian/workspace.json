@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "dfdfb7b7f10bb152",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Shells/Nu/Nu Shell FNM Config.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Ignore Line Endings.md",
+                "file": "Shells/Nu/Nu Shell FNM Config.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Ignore Line Endings.md",
+                "file": "Shells/Nu/Nu Shell FNM Config.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Ignore Line Endings.md"
+                "file": "Shells/Nu/Nu Shell FNM Config.md"
               }
             }
           }
@@ -154,10 +167,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6291f908b04ea1dd",
+  "active": "dfdfb7b7f10bb152",
   "lastOpenFiles": [
-    "Git/Ignore File System Changes.md",
     "Git/Ignore Line Endings.md",
+    "Shells/Fish",
+    "Shells/Fish.md",
+    "Shells/Nu/Nu Shell FNM Config.md",
+    "Shells/Nu",
+    "Shells",
+    "Git/Ignore File System Changes.md",
     "Windows/Ctrl Space Was Not Sent to Emulator.md",
     "PRODUCTIVITY.md",
     "Windows",
@@ -185,7 +203,6 @@
     "Projects/BRIDEX",
     "Projects",
     "Git",
-    "README.md",
-    "Ubuntu"
+    "README.md"
   ]
 }
