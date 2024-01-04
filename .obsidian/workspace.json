@@ -4,35 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "8b001664b36eed74",
+        "id": "30290023aebd713a",
         "type": "tabs",
         "children": [
           {
-            "id": "6291f908b04ea1dd",
+            "id": "bf0fcb83127eadd0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Ignore Line Endings.md",
+                "file": "Docker/Import CSV PostgreSQL.md",
                 "mode": "preview",
                 "source": true
               }
             }
           },
           {
-            "id": "dfdfb7b7f10bb152",
+            "id": "301e56ba41cba9bb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shells/Nu/Nu Shell FNM Config.md",
+                "file": "Docker/Backup and Restore PostgreSQL.md",
                 "mode": "source",
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 360.5
+    "width": 419.5
   },
   "right": {
     "id": "444c631ffd08f84d",
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shells/Nu/Nu Shell FNM Config.md",
+                "file": "Docker/Import CSV PostgreSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Shells/Nu/Nu Shell FNM Config.md",
+                "file": "Docker/Import CSV PostgreSQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shells/Nu/Nu Shell FNM Config.md"
+                "file": "Docker/Import CSV PostgreSQL.md"
               }
             }
           }
@@ -167,30 +166,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dfdfb7b7f10bb152",
+  "active": "bf0fcb83127eadd0",
   "lastOpenFiles": [
-    "Git/Ignore Line Endings.md",
-    "Shells/Fish",
-    "Shells/Fish.md",
-    "Shells/Nu/Nu Shell FNM Config.md",
-    "Shells/Nu",
-    "Shells",
-    "Git/Ignore File System Changes.md",
     "Windows/Ctrl Space Was Not Sent to Emulator.md",
-    "PRODUCTIVITY.md",
     "Windows",
     "Vmware/Mounting Windows Sharing Folder to Guest OS Linux.md",
     "Vmware",
+    "Shells/Nu/Nu Shell FNM Config.md",
+    "Shells/Nu",
+    "Shells",
+    "Git/Ignore Line Endings.md",
+    "Docker/Backup and Restore PostgreSQL.md",
+    "Docker/Import CSV PostgreSQL.md",
     "Docker/Remove none Image.md",
     "2023-10-19.md",
     "Docker/Permission Denied Docker Unix Socket.md",
-    "Docker/Backup and Restore PostgreSQL.md",
     "Command Line Interface/xrandr.md",
     "Command Line Interface/nmcli.md",
+    "PRODUCTIVITY.md",
     "Ubuntu/APT Deprecation GPG Key.md",
     "Ubuntu/Install Forticlient.md",
     "Pasted image 20230715212142.png",
     "Projects/MTAJ/Docker Compose Setup.md",
+    "Git/Ignore File System Changes.md",
     "Rust/Rust on Fish Shell.md",
     "Ubuntu/Install KVM and Qemu.md",
     "Python/Empty file .ipynb.md",
@@ -202,6 +200,7 @@
     "Projects/BRIDEX/PM2 Ecosystem Config.md",
     "Projects/BRIDEX",
     "Projects",
+    "Untitled",
     "Git",
     "README.md"
   ]
