@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Delta Pager.md",
+                "file": "Git/Change Remote URL.md",
                 "mode": "preview",
                 "source": true
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Delta Pager.md",
+                "file": "Git/Change Remote URL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Delta Pager.md",
+                "file": "Git/Change Remote URL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Delta Pager.md"
+                "file": "Git/Change Remote URL.md"
               }
             }
           }
@@ -168,8 +168,12 @@
   },
   "active": "bf0fcb83127eadd0",
   "lastOpenFiles": [
-    "Git/Ignore File System Changes.md",
     "Git/Delta Pager.md",
+    "Git/Change Remote URL.md",
+    "Neovim/Change Tab to Space.md",
+    "Git/Ignore File System Changes.md",
+    "Neovim",
+    "Git/Ignore Line Endings.md",
     "Docker/Import CSV PostgreSQL.md",
     "Docker/Backup and Restore PostgreSQL.md",
     "Command Line Interface/nmcli.md",
@@ -181,7 +185,6 @@
     "Shells/Nu/Nu Shell FNM Config.md",
     "Shells/Nu",
     "Shells",
-    "Git/Ignore Line Endings.md",
     "Docker/Remove none Image.md",
     "2023-10-19.md",
     "Docker/Permission Denied Docker Unix Socket.md",
@@ -201,8 +204,6 @@
     "Projects/BRIDEX/PM2 Ecosystem Config.md",
     "Projects/BRIDEX",
     "Projects",
-    "Untitled",
-    "Git",
-    "README.md"
+    "Git"
   ]
 }
