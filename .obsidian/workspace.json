@@ -4,34 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "30290023aebd713a",
+        "id": "c4381c0d565a3bc6",
         "type": "tabs",
         "children": [
           {
-            "id": "bf0fcb83127eadd0",
+            "id": "5b0f72590f69d9df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Change Remote URL.md",
-                "mode": "preview",
+                "file": "Neovim/Error M Character.md",
+                "mode": "source",
                 "source": true
               }
             }
           },
           {
-            "id": "301e56ba41cba9bb",
+            "id": "bd0bcc7c66b500d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/Backup and Restore PostgreSQL.md",
+                "file": "Git/Ignore Line Endings.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "f5c81119a405f5f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md",
                 "mode": "source",
                 "source": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -105,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Change Remote URL.md",
+                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Change Remote URL.md",
+                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Change Remote URL.md"
+                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md"
               }
             }
           }
@@ -166,19 +179,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf0fcb83127eadd0",
+  "active": "f5c81119a405f5f1",
   "lastOpenFiles": [
-    "Git/Delta Pager.md",
-    "Git/Change Remote URL.md",
+    "Neovim/Error M Character.md",
+    "Kubernetes/KUBEADM Cluster With CRI-O.md",
+    "Kubernetes",
     "Neovim/Change Tab to Space.md",
+    "Neovim/Neovim % Movement.md",
+    "Windows/Ctrl Space Was Not Sent to Emulator.md",
+    "Ubuntu/APT Deprecation GPG Key.md",
+    "Projects/BRIDEX/PM2 Ecosystem Config.md",
+    "Docker/Backup and Restore PostgreSQL.md",
+    "PRODUCTIVITY.md",
+    "Git/Change Remote URL.md",
+    "Git/Delta Pager.md",
     "Git/Ignore File System Changes.md",
     "Neovim",
     "Git/Ignore Line Endings.md",
     "Docker/Import CSV PostgreSQL.md",
-    "Docker/Backup and Restore PostgreSQL.md",
     "Command Line Interface/nmcli.md",
     "Command Line Interface/xrandr.md",
-    "Windows/Ctrl Space Was Not Sent to Emulator.md",
     "Windows",
     "Vmware/Mounting Windows Sharing Folder to Guest OS Linux.md",
     "Vmware",
@@ -188,22 +208,15 @@
     "Docker/Remove none Image.md",
     "2023-10-19.md",
     "Docker/Permission Denied Docker Unix Socket.md",
-    "PRODUCTIVITY.md",
-    "Ubuntu/APT Deprecation GPG Key.md",
     "Ubuntu/Install Forticlient.md",
     "Pasted image 20230715212142.png",
     "Projects/MTAJ/Docker Compose Setup.md",
     "Rust/Rust on Fish Shell.md",
     "Ubuntu/Install KVM and Qemu.md",
     "Python/Empty file .ipynb.md",
-    "Docker/Static IP.md",
-    "Projects/BRIDEX/Docker Compose Setup.md",
     "Projects/MTAJ",
     "Projects/BRISMA",
-    "Projects/BRISMA.md",
-    "Projects/BRIDEX/PM2 Ecosystem Config.md",
     "Projects/BRIDEX",
-    "Projects",
-    "Git"
+    "Projects"
   ]
 }
