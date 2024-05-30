@@ -1,3 +1,7 @@
+Import Public Keys
+```
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo gpg --dearmour -o /usr/share/keyrings/microsoft.gpg
+```
 List Existing Keys
 ```
 sudo apt-key list
