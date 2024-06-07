@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5b0f72590f69d9df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Neovim/Error M Character.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "bd0bcc7c66b500d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Git/Ignore Line Endings.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
             "id": "f5c81119a405f5f1",
             "type": "leaf",
             "state": {
@@ -43,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -166,8 +141,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,6 +155,7 @@
   },
   "active": "f5c81119a405f5f1",
   "lastOpenFiles": [
+    "Git/Ignore Line Endings.md",
     "Neovim/Error M Character.md",
     "Kubernetes/KUBEADM Cluster With CRI-O.md",
     "Kubernetes",
@@ -195,7 +170,6 @@
     "Git/Delta Pager.md",
     "Git/Ignore File System Changes.md",
     "Neovim",
-    "Git/Ignore Line Endings.md",
     "Docker/Import CSV PostgreSQL.md",
     "Command Line Interface/nmcli.md",
     "Command Line Interface/xrandr.md",
