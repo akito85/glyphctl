@@ -1,11 +1,13 @@
-## LIGHTWEIGHT CONTAINER RUNTIME FOR KUBERNETES
+## Pre-requisite
+
+### 1. Repository Setup
 
 ##### Add the Kubernetes repository
 ```
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | 
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | 
 	gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
-echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /" |
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /" |
     tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
@@ -23,7 +25,39 @@ apt update
 apt install -y cri-o kubelet kubeadm kubectl
 ```
 
-### Initializing your control-plane node[](https://k8s-docs.netlify.app/en/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node)
+### 2. Environment Setup
+
+#### Disable Swap
+```
+# Disable all devices marked as swap in /etc/fstab
+swapoff -a
+
+# Comment /etc/fstab swap mounting point
+sed -e '/swap/ s/^#*/#/' -i /etc/fstab   
+
+# Prevent systemd automounted swap
+systemctl --all --type swap
+systemctl mask dev-sdaX.swap
+```
+
+#### Load Modules
+```
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF
+```
+
+#### Sysctl Entries
+```
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-iptables  = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.ipv4.ip_forward                 = 1
+EOF
+```
+
+### Initializing your control-plane node
 
 The control-plane node is the machine where the control plane components run, including etcd (the cluster database) and the API Server (which the kubectl command line tool communicates with).
 
@@ -50,7 +84,11 @@ Docker     => unix:///var/run/cri-dockerd.sock`
 
 Remember to use your selected container socket
 ```bash
+# flanel
 sudo kubeadm init --apiserver-advertise-address=192.168.100.150 --cri-socket=unix:///var/run/crio/crio.sock --pod-network-cidr=10.244.0.0/16
+
+# cilium
+sudo kubeadm init --apiserver-advertise-address=192.168.100.150 --cri-socket=unix:///var/run/crio/crio.sock --pod-network-cidr=10.1.1.0/24 
 ```
 
 Success initialization
@@ -73,8 +111,13 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join 192.168.100.150:6443 --token sgeduc.xgj392mgbj6jm6yq \
-        --discovery-token-ca-cert-hash sha256:21e366ef474a1a02cff3b38a5322cc0d1fabb0e9fe4d2fe473962324a95948a8
+kubeadm join 192.168.100.150:6443 --token g9c56i.4d5uxztxb8qclbu9 \
+        --discovery-token-ca-cert-hash sha256:b6c1d8d4b68d30c0ece8189c51c05c8549d5c83d1218008ae3a188d6cc047bbd
+```
+
+You Cannot Join into The Cluster If The Token Expired
+```yaml
+kubeadm token create --print-join-command
 ```
 
 Before Running Any Network  Addons
@@ -90,24 +133,15 @@ kubeadm cluster-info
 kubeadm get nodes
 ```
 
-Autostart kubectl swap needs to be off the `swapoff -a` command cannot be used because is not persistent on boot. Meanwhile disabling the swap in `/etc/fstab` is not working well because systemd will auto mount swap partition if there's any. Thus using this command below is recommended: 
-
-```
-systemctl mask "dev-sdaXX.swap"
-```
-
-Reset Kubeadm Config
-```
-sudo kubeadm reset --cri-socket=unix:///var/run/crio/crio.sock
-sudo rm -rf $HOME/.kube/config /etc/cni/net.d/
-```
-
-## Install Flanel
+## 3. Install CNI
+## Flanel
+Install and Apply Flannel to Kubectl
 ```
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
 
-## Install Cillium
+## Cilium
+Install Cilium CLI
 ```
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
 CLI_ARCH=amd64
@@ -118,6 +152,12 @@ sudo tar xzvfC cilium-linux-${CLI_ARCH}.tar.gz /usr/local/bin
 rm cilium-linux-${CLI_ARCH}.tar.gz{,.sha256sum}
 ```
 
+Apply Cilium to Kubectl
+```
+cilium install
+```
+
+---
 ### Remove the node
 
 Talking to the control-plane node with the appropriate credentials, run:
@@ -150,3 +190,8 @@ If you wish to start over simply run `kubeadm init` or `kubeadm join` with t
 ### Clean up the control plane
 
 You can use `kubeadm reset` on the control plane host to trigger a best-effort clean up.
+
+```
+sudo kubeadm reset --cri-socket=unix:///var/run/crio/crio.sock
+sudo rm -rf $HOME/.kube/config /etc/cni/net.d/
+```
