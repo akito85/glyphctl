@@ -133,14 +133,14 @@ kubeadm cluster-info
 kubeadm get nodes
 ```
 
-## 3. Install CNI
-## Flanel
+### 3. Install CNI
+#### Flanel
 Install and Apply Flannel to Kubectl
 ```
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
 
-## Cilium
+#### Cilium
 Install Cilium CLI
 ```
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
@@ -158,7 +158,7 @@ cilium install
 ```
 
 ---
-### Remove the node
+### 4. Remove the node
 
 Talking to the control-plane node with the appropriate credentials, run:
 
@@ -194,4 +194,69 @@ You can use `kubeadm reset` on the control plane host to trigger a best-effort
 ```
 sudo kubeadm reset --cri-socket=unix:///var/run/crio/crio.sock
 sudo rm -rf $HOME/.kube/config /etc/cni/net.d/
+```
+
+### 5. Troubleshooting
+#### Check cilium logs
+
+Get all cilium pods
+```
+kubectl -n kube-system get pods -l k8s-app=cilium
+```
+
+Check the logs of the most restarted cilium pods
+```
+kubectl -n kube-system  logs --timestamps cilium-xxx
+```
+
+Go for detailed logs
+```
+kubectl -n kube-system exec cilium-xxx -- cilium-dbg status
+```
+
+Use this script to debug cilium in all nodes and run `./k8s-cilium-exec.sh cilium-dbg status`
+```
+curl -sLO https://raw.githubusercontent.com/cilium/cilium/main/contrib/k8s/k8s-cilium-exec.sh
+chmod +x ./k8s-cilium-exec.sh
+```
+
+If the return is like below, it means you have to check kubelet logs
+```
+Defaulted container "cilium-agent" out of: cilium-agent, config (init), mount-cgroup (init), apply-sysctl-overwrites (init), mount-bpf-fs (init), clean-cilium-state (init), install-cni-binaries (init)
+Error from server (BadRequest): container "cilium-agent" in pod "cilium-6zk7d" is waiting to start: PodInitializing
+```
+
+Check kubelet logs
+```
+journalctl -xeu kubelet
+```
+
+If find something like this
+```
+"Could not open resolv conf file." err="open /run/systemd/resolve/resolv.conf: no such file or directory"
+```
+
+Edit kubelet config, change `resolvConf: <path-to-your-resolv.conf>`
+```
+kubectl edit cm -n kube-system kubelet-config
+```
+
+Download config from cluster
+```
+kubeadm upgrade node phase kubelet-config
+```
+
+Restart kubelet
+```
+systemctl restart kubelet
+```
+
+Recreate CoreDNS pods (restart rollout or delete existing pods)
+```
+kubectl delete pods
+```
+
+Run the `rollout restart` command below to restart the pods one by one without impacting the deployment (`deployment nginx-deployment`).
+```
+kubectl rollout restart deployment nginx-deployment
 ```

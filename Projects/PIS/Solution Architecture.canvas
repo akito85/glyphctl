@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"f6969b82f9821a42","type":"file","file":"Pasted image 20240730133001.png","x":-420,"y":-340,"width":839,"height":340},
+		{"id":"dc8b439f511cabaf","type":"text","text":"INTEGRATION","x":-125,"y":80,"width":250,"height":50,"color":"1"},
+		{"id":"ea947e340666e08b","type":"text","text":"DATABASE CLUSTER","x":-125,"y":220,"width":250,"height":50},
+		{"id":"a1d5b78a39164b09","type":"text","text":"BACK-END API","x":-125,"y":340,"width":250,"height":50},
+		{"id":"612a4639512de8f2","type":"text","text":"FRONT-END CMS","x":125,"y":520,"width":270,"height":50},
+		{"id":"b7f4be80fcfc7256","type":"text","text":"FRONT-END DASHBOARD","x":-395,"y":520,"width":270,"height":50},
+		{"id":"f38b16d17e8a726f","type":"text","text":"MACHINE LEARNING","x":200,"y":215,"width":250,"height":60,"color":"5"}
+	],
+	"edges":[
+		{"id":"ebf083302edf007a","fromNode":"f6969b82f9821a42","fromSide":"bottom","toNode":"dc8b439f511cabaf","toSide":"top"},
+		{"id":"f12f20010a59ee54","fromNode":"dc8b439f511cabaf","fromSide":"bottom","toNode":"ea947e340666e08b","toSide":"top"},
+		{"id":"a856265b1ee5a825","fromNode":"ea947e340666e08b","fromSide":"bottom","toNode":"a1d5b78a39164b09","toSide":"top"},
+		{"id":"715ecee6c6f4186f","fromNode":"a1d5b78a39164b09","fromSide":"bottom","toNode":"b7f4be80fcfc7256","toSide":"top"},
+		{"id":"d3f780d81e519ee5","fromNode":"a1d5b78a39164b09","fromSide":"bottom","toNode":"612a4639512de8f2","toSide":"top"},
+		{"id":"529b7ae670224293","fromNode":"ea947e340666e08b","fromSide":"right","toNode":"f38b16d17e8a726f","toSide":"left"}
+	]
+}

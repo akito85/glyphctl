@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c4381c0d565a3bc6",
+        "id": "1b0b436e9e28dc71",
         "type": "tabs",
         "children": [
           {
-            "id": "f5c81119a405f5f1",
+            "id": "b164934c83110604",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,14 +89,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,16 +126,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Kubernetes/KUBEADM Cluster With CRI-O.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -153,24 +146,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f5c81119a405f5f1",
+  "active": "b164934c83110604",
   "lastOpenFiles": [
+    "Kubernetes/KUBEADM Cluster With CRI-O.md",
+    "Kubernetes/Kubernetes Object.md",
+    "Kubernetes/Kubernetes Pod.md",
+    "Kubernetes/Kubernetes Steps.md",
+    "Projects/PIS/Solution Architecture.canvas",
+    "Projects/PIS/Solution Architecture.md",
+    "Pasted image 20240730133001.png",
+    "Projects/PIS",
+    "Docker/Import CSV PostgreSQL.md",
+    "Docker/Backup and Restore MongoDB.md",
+    "Docker/Backup and Restore PostgreSQL.md",
     "Git/Ignore Line Endings.md",
     "Neovim/Error M Character.md",
-    "Kubernetes/KUBEADM Cluster With CRI-O.md",
     "Kubernetes",
     "Neovim/Change Tab to Space.md",
     "Neovim/Neovim % Movement.md",
     "Windows/Ctrl Space Was Not Sent to Emulator.md",
     "Ubuntu/APT Deprecation GPG Key.md",
     "Projects/BRIDEX/PM2 Ecosystem Config.md",
-    "Docker/Backup and Restore PostgreSQL.md",
     "PRODUCTIVITY.md",
     "Git/Change Remote URL.md",
     "Git/Delta Pager.md",
     "Git/Ignore File System Changes.md",
     "Neovim",
-    "Docker/Import CSV PostgreSQL.md",
     "Command Line Interface/nmcli.md",
     "Command Line Interface/xrandr.md",
     "Windows",
@@ -181,16 +182,9 @@
     "Shells",
     "Docker/Remove none Image.md",
     "2023-10-19.md",
-    "Docker/Permission Denied Docker Unix Socket.md",
-    "Ubuntu/Install Forticlient.md",
     "Pasted image 20230715212142.png",
-    "Projects/MTAJ/Docker Compose Setup.md",
-    "Rust/Rust on Fish Shell.md",
-    "Ubuntu/Install KVM and Qemu.md",
-    "Python/Empty file .ipynb.md",
     "Projects/MTAJ",
     "Projects/BRISMA",
-    "Projects/BRIDEX",
-    "Projects"
+    "Projects/BRIDEX"
   ]
 }
