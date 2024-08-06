@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1b0b436e9e28dc71",
+        "id": "a5b26c37fb854e1c",
         "type": "tabs",
         "children": [
           {
-            "id": "b164934c83110604",
+            "id": "9840bed75f8a547c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -146,14 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b164934c83110604",
+  "active": "9840bed75f8a547c",
   "lastOpenFiles": [
-    "Kubernetes/KUBEADM Cluster With CRI-O.md",
-    "Kubernetes/Kubernetes Object.md",
     "Kubernetes/Kubernetes Pod.md",
     "Kubernetes/Kubernetes Steps.md",
+    "Kubernetes/Kubernetes Node.md",
+    "Kubernetes/KUBEADM Cluster With CRI-O.md",
+    "Kubernetes/Kubernetes Object.md",
+    "Kubernetes/Local Cluster.canvas",
     "Projects/PIS/Solution Architecture.canvas",
-    "Projects/PIS/Solution Architecture.md",
+    "Projects/PIS/Server Topology.canvas",
+    "Projects/PIS/Server Topology.md",
     "Pasted image 20240730133001.png",
     "Projects/PIS",
     "Docker/Import CSV PostgreSQL.md",

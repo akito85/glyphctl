@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"8e7d4802109de541","x":100,"y":-180,"width":250,"height":60,"type":"text","text":"192.168.122.21 (node-1)"},
+		{"id":"c5c9bff4345a7c78","type":"text","text":"192.168.122.23 (node-3)","x":100,"y":60,"width":250,"height":60},
+		{"id":"b92bbf7408fd7fc6","x":-600,"y":-60,"width":250,"height":60,"type":"text","text":"192.168.100.150 (host)"},
+		{"id":"08891de37274d894","x":-240,"y":-60,"width":250,"height":60,"type":"text","text":"192.168.122.1 (kvm-gw)"},
+		{"id":"d802ef0740b77a34","x":100,"y":-60,"width":250,"height":60,"type":"text","text":"192.168.122.22 (node-2)"}
+	],
+	"edges":[
+		{"id":"c3aa8bbec034a097","fromNode":"b92bbf7408fd7fc6","fromSide":"right","toNode":"08891de37274d894","toSide":"left"},
+		{"id":"b2084f444353bd68","fromNode":"08891de37274d894","fromSide":"right","toNode":"8e7d4802109de541","toSide":"left"},
+		{"id":"4ebac189ee1e6049","fromNode":"08891de37274d894","fromSide":"right","toNode":"d802ef0740b77a34","toSide":"left"},
+		{"id":"3a49b6acba00fd9d","fromNode":"08891de37274d894","fromSide":"right","toNode":"c5c9bff4345a7c78","toSide":"left"}
+	]
+}

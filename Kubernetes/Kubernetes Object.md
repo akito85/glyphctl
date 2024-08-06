@@ -70,7 +70,7 @@ Or apply using -n option to assign namespace
 kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml -n my-namespace
 ```
 
-Create Deployment
+Create Deployment Example with 1 Replica to Any Nodes
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -111,6 +111,8 @@ spec:
           emptyDir: {}
 ```
 
+Create Deployment Example with 3 Replica to Any Nodes
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -149,7 +151,7 @@ spec:
         kubernetes.io/os: linux
 ```
 
-Create Service
+Create Service to Access Deployment / Pods
 ```yaml
 apiVersion: v1
 kind: Service

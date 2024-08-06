@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"4bc5536bda3b03ba","type":"text","text":"USER","x":160,"y":-720,"width":250,"height":60},
+		{"id":"d2725bae6a4daf7e","type":"text","text":"WAF","x":160,"y":-600,"width":250,"height":60},
+		{"id":"d37a0b51e3a3cca9","type":"text","text":"FE LOAD BALANCER","x":160,"y":-480,"width":250,"height":60},
+		{"id":"2d1bed6d2b12a567","type":"text","text":"FRONT-END CLUSTER","x":160,"y":-360,"width":250,"height":60},
+		{"id":"22d7142bb61f3307","type":"text","text":"BACK-END CLUSTER","x":160,"y":-240,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"9631a1dd7125250e","fromNode":"4bc5536bda3b03ba","fromSide":"bottom","toNode":"d2725bae6a4daf7e","toSide":"top"},
+		{"id":"931b957ed2325730","fromNode":"d2725bae6a4daf7e","fromSide":"bottom","toNode":"d37a0b51e3a3cca9","toSide":"top"},
+		{"id":"2597c533a9071421","fromNode":"d37a0b51e3a3cca9","fromSide":"bottom","toNode":"2d1bed6d2b12a567","toSide":"top"},
+		{"id":"2cdcd40620ecaf81","fromNode":"2d1bed6d2b12a567","fromSide":"bottom","toNode":"22d7142bb61f3307","toSide":"top"}
+	]
+}

@@ -84,9 +84,6 @@ Docker     => unix:///var/run/cri-dockerd.sock`
 
 Remember to use your selected container socket
 ```bash
-# flanel
-sudo kubeadm init --apiserver-advertise-address=192.168.100.150 --cri-socket=unix:///var/run/crio/crio.sock --pod-network-cidr=10.244.0.0/16
-
 # cilium
 sudo kubeadm init --apiserver-advertise-address=192.168.100.150 --cri-socket=unix:///var/run/crio/crio.sock --pod-network-cidr=10.1.1.0/24 
 ```
@@ -98,7 +95,7 @@ Your Kubernetes control-plane has initialized successfully!
 To start using your cluster, you need to run the following as a regular user:
 
   mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+	  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Alternatively, if you are the root user, you can run:
@@ -111,20 +108,15 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join 192.168.100.150:6443 --token g9c56i.4d5uxztxb8qclbu9 \
-        --discovery-token-ca-cert-hash sha256:b6c1d8d4b68d30c0ece8189c51c05c8549d5c83d1218008ae3a188d6cc047bbd
+				kubeadm join 192.168.100.150:6443 --token g9c56i.4d5uxztxb8qclbu9 \
+				        --discovery-token-ca-cert-hash sha256:b6c1d8d4b68d30c0ece8189c51c05c8549d5c83d1218008ae3a188d6cc047bbd
 ```
 
-You Cannot Join into The Cluster If The Token Expired
-```yaml
-kubeadm token create --print-join-command
-```
-
-Before Running Any Network  Addons
+Before Running Any Network  Addons (***admin.conf*** or ***kubelet.conf***)
 ```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+	sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 Test Kubeadm Installation
@@ -157,8 +149,21 @@ Apply Cilium to Kubectl
 cilium install
 ```
 
----
-### 4. Remove the node
+### 4. Node Management
+#### Join the Node to a Cluster
+
+Join Command
+```
+
+kubeadm join 192.168.100.150:6443 --token g9c56i.4d5uxztxb8qclbu9 --discovery-token-ca-cert-hash sha256:b6c1d8d4b68d30c0ece8189c51c05c8549d5c83d1218008ae3a188d6cc047bbd
+```
+
+If The Token Expired Reprint Join Command
+```yaml
+kubeadm token create --print-join-command
+```
+
+#### Remove the Node from a Cluster
 
 Talking to the control-plane node with the appropriate credentials, run:
 
@@ -187,16 +192,59 @@ ipvsadm -C
 
 If you wish to start over simply run `kubeadm init` or `kubeadm join` with the appropriate arguments.
 
-### Clean up the control plane
+---
+#### Node Labels
+##### 1. How to read node labels in Kubernetes
 
-You can use `kubeadm reset` on the control plane host to trigger a best-effort clean up.
+You can list labels in this fashion:
+
+```shell
+kubectl get nodes --show-labels
+```
+
+If you want to know the details for a specific node, use this:
 
 ```
-sudo kubeadm reset --cri-socket=unix:///var/run/crio/crio.sock
-sudo rm -rf $HOME/.kube/config /etc/cni/net.d/
+kubectl label --list nodes node_name
 ```
+
+> [!NOTE]
+> > The labels are in form of key-value pair. They must begin with a letter or number, and may contain letters, numbers, hyphens, dots, and underscores, up to 63 characters each.
+
+##### 2. How to assign label to a node
+
+Label Node:
+```
+kubectl label node node-3 node-role.kubernetes.io/worker=worker3
+```
+
+Now suppose you want `kworker-rj1` node to host all the production related workloads.
+
+Let's label that node with an appropriate name (like production):
+
+```bash
+kubectl label nodes kworker-rj1 workload=production
+```
+
+Confirm the pod labelling:
+
+```bash
+kubectl label --list nodes kworker-rj1 | grep -i workload
+```
+
+I used the grep command to weed out unnecessary details and focus on the label.
+
+
 
 ### 5. Troubleshooting
+
+#### Check kubelet logs
+
+Check kubelet logs via journalctl
+```
+journalctl -xeu kubelet
+```
+
 #### Check cilium logs
 
 Get all cilium pods
@@ -220,43 +268,93 @@ curl -sLO https://raw.githubusercontent.com/cilium/cilium/main/contrib/k8s/k8s-c
 chmod +x ./k8s-cilium-exec.sh
 ```
 
-If the return is like below, it means you have to check kubelet logs
+---
+
+#### Error logs
+**ERROR**
 ```
 Defaulted container "cilium-agent" out of: cilium-agent, config (init), mount-cgroup (init), apply-sysctl-overwrites (init), mount-bpf-fs (init), clean-cilium-state (init), install-cni-binaries (init)
 Error from server (BadRequest): container "cilium-agent" in pod "cilium-6zk7d" is waiting to start: PodInitializing
 ```
 
-Check kubelet logs
-```
-journalctl -xeu kubelet
-```
+AND
 
-If find something like this
 ```
 "Could not open resolv conf file." err="open /run/systemd/resolve/resolv.conf: no such file or directory"
 ```
 
-Edit kubelet config, change `resolvConf: <path-to-your-resolv.conf>`
+SOLUTION
+
+1. Edit kubelet config, change `resolvConf: <path-to-your-resolv.conf>`
 ```
 kubectl edit cm -n kube-system kubelet-config
 ```
 
-Download config from cluster
+2. Download config from cluster
 ```
 kubeadm upgrade node phase kubelet-config
 ```
 
-Restart kubelet
+3. Restart kubelet
 ```
 systemctl restart kubelet
 ```
 
-Recreate CoreDNS pods (restart rollout or delete existing pods)
+4. Recreate CoreDNS pods (restart rollout or delete existing pods)
 ```
-kubectl delete pods
+kubectl delete pods 'CoreDNS'
 ```
 
-Run the `rollout restart` command below to restart the pods one by one without impacting the deployment (`deployment nginx-deployment`).
+5. Run the `rollout restart` command below to restart the pods one by one without impacting the deployment (`deployment nginx-deployment`).
 ```
 kubectl rollout restart deployment nginx-deployment
+```
+
+---
+
+**ERROR**
+```
+Error in configuration:
+* unable to read client-cert /var/lib/kubelet/pki/kubelet-client-current.pem for default-auth due to open /var/lib/kubelet/pki/kubelet-client-current.pem: permission denied
+* unable to read client-key /var/lib/kubelet/pki/kubelet-client-current.pem for default-auth due to open /var/lib/kubelet/pki/kubelet-client-current.pem: permission denied
+```
+
+SOLUTION
+
+1. Change folder permission
+```
+sudo chown $(id -u):$(id -g) /var/lib/kubelet/ -R
+```
+
+2. Restart kubelet
+```
+sudo systemctl kubelet restart
+```
+
+---
+
+**ERROR**
+```
+Error: template: cilium/templates/cilium-envoy/servicemonitor.yaml:1:20: executing "cilium/templates/cilium-envoy/servicemonitor.yaml" at <include "envoyDaemonSetEnabled" .>: error calling include: template: cilium/templates/_helpers.tpl:153:11: executing "envoyDaemonSetEnabled" at <semverCompare ">=1.16" (default "1.16" .Values.upgradeCompatibility)>: error calling semverCompare: Invalid Semantic Version
+```
+
+SOLUTION
+
+1. Try to disable hubble
+```
+cilium hubble disable
+```
+
+2. Restart kubelet
+```
+sudo systemctl kubelet restart
+```
+
+### Clean up the control plane
+
+You can use `kubeadm reset` on the control plane host to trigger a best-effort clean up.
+
+```
+sudo kubeadm reset --cri-socket=unix:///var/run/crio/crio.sock
+sudo rm -rf $HOME/.kube/config /etc/cni/net.d/
 ```
