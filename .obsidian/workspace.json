@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a5b26c37fb854e1c",
+        "id": "1915a2513e6f4650",
         "type": "tabs",
         "children": [
           {
-            "id": "9840bed75f8a547c",
+            "id": "fc7af884aceeb5b2",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -146,13 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9840bed75f8a547c",
+  "active": "fc7af884aceeb5b2",
   "lastOpenFiles": [
-    "Kubernetes/Kubernetes Pod.md",
-    "Kubernetes/Kubernetes Steps.md",
-    "Kubernetes/Kubernetes Node.md",
-    "Kubernetes/KUBEADM Cluster With CRI-O.md",
     "Kubernetes/Kubernetes Object.md",
+    "Kubernetes/Kubernetes Pod.md",
+    "Kubernetes/Kubernetes Node.md",
+    "Kubernetes/Kubernetes Steps.md",
+    "Kubernetes/KUBEADM Cluster With CRI-O.md",
     "Kubernetes/Local Cluster.canvas",
     "Projects/PIS/Solution Architecture.canvas",
     "Projects/PIS/Server Topology.canvas",
