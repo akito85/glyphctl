@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1915a2513e6f4650",
+        "id": "31b817e379fcca23",
         "type": "tabs",
         "children": [
           {
-            "id": "fc7af884aceeb5b2",
+            "id": "32ac15baecc82e2c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -146,11 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fc7af884aceeb5b2",
+  "active": "32ac15baecc82e2c",
   "lastOpenFiles": [
-    "Kubernetes/Kubernetes Object.md",
-    "Kubernetes/Kubernetes Pod.md",
+    "Neovim/Error M Character.md",
+    "Neovim/Change Tab to Space.md",
     "Kubernetes/Kubernetes Node.md",
+    "Kubernetes/Kubernetes Pod.md",
+    "Kubernetes/Kubernetes Object.md",
     "Kubernetes/Kubernetes Steps.md",
     "Kubernetes/KUBEADM Cluster With CRI-O.md",
     "Kubernetes/Local Cluster.canvas",
@@ -163,9 +165,7 @@
     "Docker/Backup and Restore MongoDB.md",
     "Docker/Backup and Restore PostgreSQL.md",
     "Git/Ignore Line Endings.md",
-    "Neovim/Error M Character.md",
     "Kubernetes",
-    "Neovim/Change Tab to Space.md",
     "Neovim/Neovim % Movement.md",
     "Windows/Ctrl Space Was Not Sent to Emulator.md",
     "Ubuntu/APT Deprecation GPG Key.md",
