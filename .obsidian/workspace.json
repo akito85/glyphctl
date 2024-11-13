@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "31b817e379fcca23",
+        "id": "01971828dab0accb",
         "type": "tabs",
         "children": [
           {
-            "id": "32ac15baecc82e2c",
+            "id": "49b6bf5fcbaedefd",
             "type": "leaf",
             "state": {
               "type": "empty",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -35,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -50,7 +54,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -58,7 +64,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -66,7 +74,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -89,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Command Line Interface/Ibus ERROR (KDE 6.2).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +107,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": false
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Ibus ERROR (KDE 6.2)"
             }
           },
           {
@@ -105,9 +118,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Command Line Interface/Ibus ERROR (KDE 6.2).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Ibus ERROR (KDE 6.2)"
             }
           },
           {
@@ -118,7 +134,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -126,7 +144,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Command Line Interface/Ibus ERROR (KDE 6.2).md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Ibus ERROR (KDE 6.2)"
             }
           }
         ]
@@ -146,16 +168,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "32ac15baecc82e2c",
+  "active": "49b6bf5fcbaedefd",
   "lastOpenFiles": [
-    "Neovim/Error M Character.md",
-    "Neovim/Change Tab to Space.md",
-    "Kubernetes/Kubernetes Node.md",
-    "Kubernetes/Kubernetes Pod.md",
-    "Kubernetes/Kubernetes Object.md",
-    "Kubernetes/Kubernetes Steps.md",
+    "Command Line Interface/Create Virtual Interface.md",
     "Kubernetes/KUBEADM Cluster With CRI-O.md",
+    "Kubernetes/Kubernetes Node.md",
+    "Kubernetes/Kubernetes Object.md",
+    "Kubernetes/Kubernetes Pod.md",
+    "Kubernetes/Kubernetes Steps.md",
     "Kubernetes/Local Cluster.canvas",
+    "Docker/Compose/Prometheus.md",
+    "Kubernetes/Object",
+    "Minio/Minio Client - Prometheus.md",
+    "Docker/Compose",
+    "Minio/Minio Client.md",
+    "Docker/Backup and Restore PostgreSQL.md",
+    "Minio",
+    "Neovim/Error M Character.md",
+    "Command Line Interface/Ibus ERROR (KDE 6.2).md",
+    "Neovim/Change Tab to Space.md",
     "Projects/PIS/Solution Architecture.canvas",
     "Projects/PIS/Server Topology.canvas",
     "Projects/PIS/Server Topology.md",
@@ -163,7 +194,6 @@
     "Projects/PIS",
     "Docker/Import CSV PostgreSQL.md",
     "Docker/Backup and Restore MongoDB.md",
-    "Docker/Backup and Restore PostgreSQL.md",
     "Git/Ignore Line Endings.md",
     "Kubernetes",
     "Neovim/Neovim % Movement.md",
@@ -176,18 +206,10 @@
     "Git/Ignore File System Changes.md",
     "Neovim",
     "Command Line Interface/nmcli.md",
-    "Command Line Interface/xrandr.md",
     "Windows",
-    "Vmware/Mounting Windows Sharing Folder to Guest OS Linux.md",
     "Vmware",
-    "Shells/Nu/Nu Shell FNM Config.md",
     "Shells/Nu",
     "Shells",
-    "Docker/Remove none Image.md",
-    "2023-10-19.md",
-    "Pasted image 20230715212142.png",
-    "Projects/MTAJ",
-    "Projects/BRISMA",
-    "Projects/BRIDEX"
+    "Pasted image 20230715212142.png"
   ]
 }

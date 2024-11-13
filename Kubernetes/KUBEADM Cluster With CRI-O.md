@@ -95,7 +95,7 @@ Your Kubernetes control-plane has initialized successfully!
 To start using your cluster, you need to run the following as a regular user:
 
   mkdir -p $HOME/.kube
-	  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Alternatively, if you are the root user, you can run:
@@ -108,8 +108,8 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-				kubeadm join 192.168.100.150:6443 --token g9c56i.4d5uxztxb8qclbu9 \
-				        --discovery-token-ca-cert-hash sha256:b6c1d8d4b68d30c0ece8189c51c05c8549d5c83d1218008ae3a188d6cc047bbd
+kubeadm join 192.168.100.150:6443 --token gj0lmr.w70nq5s7wicrbbda \
+        --discovery-token-ca-cert-hash sha256:026878ed29b623bd95dfe18b9ebedf15aeaf6308ded64dcb957e8b7a29c53c4e
 ```
 
 Before Running Any Network  Addons (***admin.conf*** or ***kubelet.conf***)
@@ -355,6 +355,5 @@ sudo systemctl kubelet restart
 You can use `kubeadm reset` on the control plane host to trigger a best-effort clean up.
 
 ```
-sudo kubeadm reset --cri-socket=unix:///var/run/crio/crio.sock
 sudo rm -rf $HOME/.kube/config /etc/cni/net.d/
 ```
