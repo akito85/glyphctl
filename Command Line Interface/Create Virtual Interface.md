@@ -1,3 +1,8 @@
+**The generic format to create interface**
+```bash
+$ ip link add link <physical_interface> name <virtual_interface_name> type <type>
+```
+
 ## Creating Interface Type 'dummy'
 
 The basic syntax is as follows:

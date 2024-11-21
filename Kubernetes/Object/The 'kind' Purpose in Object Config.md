@@ -1,0 +1,14 @@
+
+- **Pod:** Represents the smallest deployable unit of computing, containing one or more containers.
+- **Deployment:** Manages the deployment and scaling of Pods. It ensures that a desired number of Pod replicas are running and available.
+- **Service:** Exposes a group of Pods as a network service. It provides a stable network endpoint for the Pods.
+- **ConfigMap:** Stores configuration data as key-value pairs.
+- **Secret:** Stores sensitive information, such as passwords, API keys, and certificates.
+- **Namespace:** Defines a scope for resources.
+- **PersistentVolumeClaim:** Requests storage.
+- **PersistentVolume:** Provides storage.
+- **Job:** Runs a one-off task to completion.
+- **CronJob:** Runs jobs on a schedule.
+- **Ingress:** Exposes HTTP and HTTPS services to the outside world.
+- **DaemonSet:** Ensures that a Pod runs on every Node in the cluster.
+- **StatefulSet:** Manages stateful applications.

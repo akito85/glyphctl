@@ -11,10 +11,14 @@
             "id": "49b6bf5fcbaedefd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Object/The 'apiVersion' Purpose in Object Config.md",
+                "mode": "preview",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "The 'apiVersion' Purpose in Object Config"
             }
           }
         ]
@@ -170,12 +174,15 @@
   },
   "active": "49b6bf5fcbaedefd",
   "lastOpenFiles": [
-    "Command Line Interface/Create Virtual Interface.md",
-    "Kubernetes/KUBEADM Cluster With CRI-O.md",
-    "Kubernetes/Kubernetes Node.md",
-    "Kubernetes/Kubernetes Object.md",
+    "Kubernetes/Object/Deployment Yaml Under Spec Container.md",
+    "Kubernetes/Object/The 'apiVersion' Purpose in Object Config.md",
+    "Kubernetes/Object/The 'kind' Purpose in Object Config.md",
     "Kubernetes/Kubernetes Pod.md",
+    "Kubernetes/Kubernetes Object.md",
+    "Kubernetes/Kubernetes Node.md",
+    "Kubernetes/KUBEADM Cluster With CRI-O.md",
     "Kubernetes/Kubernetes Steps.md",
+    "Command Line Interface/Create Virtual Interface.md",
     "Kubernetes/Local Cluster.canvas",
     "Docker/Compose/Prometheus.md",
     "Kubernetes/Object",
@@ -202,10 +209,7 @@
     "Projects/BRIDEX/PM2 Ecosystem Config.md",
     "PRODUCTIVITY.md",
     "Git/Change Remote URL.md",
-    "Git/Delta Pager.md",
-    "Git/Ignore File System Changes.md",
     "Neovim",
-    "Command Line Interface/nmcli.md",
     "Windows",
     "Vmware",
     "Shells/Nu",
