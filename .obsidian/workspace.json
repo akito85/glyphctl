@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "01971828dab0accb",
+        "id": "7ab23565608cbe3d",
         "type": "tabs",
         "children": [
           {
-            "id": "49b6bf5fcbaedefd",
+            "id": "26c1a0071cd78663",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Object/The 'apiVersion' Purpose in Object Config.md",
+                "file": "Command Line Interface/Warp CLI.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "The 'apiVersion' Purpose in Object Config"
+              "title": "Warp CLI"
             }
           }
         ]
@@ -172,17 +172,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49b6bf5fcbaedefd",
+  "active": "26c1a0071cd78663",
   "lastOpenFiles": [
-    "Kubernetes/Object/Deployment Yaml Under Spec Container.md",
+    "Kubernetes/KUBEADM Cluster With CRI-O.md",
+    "Command Line Interface/Warp CLI.md",
+    "Kubernetes/Kubernetes Steps and Guides.md",
+    "Pasted image 20241207080519.png",
+    "Pasted image 20241207080307.png",
+    "Command Line Interface/xrandr.md",
+    "Command Line Interface/nmcli.md",
+    "Command Line Interface/Ibus ERROR (KDE 6.2).md",
+    "Command Line Interface/Create Virtual Interface.md",
+    "Kubernetes/Kubernetes Node.md",
     "Kubernetes/Object/The 'apiVersion' Purpose in Object Config.md",
+    "Kubernetes/Object/Deployment Yaml Under Spec Container.md",
     "Kubernetes/Object/The 'kind' Purpose in Object Config.md",
     "Kubernetes/Kubernetes Pod.md",
     "Kubernetes/Kubernetes Object.md",
-    "Kubernetes/Kubernetes Node.md",
-    "Kubernetes/KUBEADM Cluster With CRI-O.md",
-    "Kubernetes/Kubernetes Steps.md",
-    "Command Line Interface/Create Virtual Interface.md",
     "Kubernetes/Local Cluster.canvas",
     "Docker/Compose/Prometheus.md",
     "Kubernetes/Object",
@@ -192,7 +198,6 @@
     "Docker/Backup and Restore PostgreSQL.md",
     "Minio",
     "Neovim/Error M Character.md",
-    "Command Line Interface/Ibus ERROR (KDE 6.2).md",
     "Neovim/Change Tab to Space.md",
     "Projects/PIS/Solution Architecture.canvas",
     "Projects/PIS/Server Topology.canvas",
@@ -206,9 +211,6 @@
     "Neovim/Neovim % Movement.md",
     "Windows/Ctrl Space Was Not Sent to Emulator.md",
     "Ubuntu/APT Deprecation GPG Key.md",
-    "Projects/BRIDEX/PM2 Ecosystem Config.md",
-    "PRODUCTIVITY.md",
-    "Git/Change Remote URL.md",
     "Neovim",
     "Windows",
     "Vmware",
