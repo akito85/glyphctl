@@ -1,6 +1,6 @@
-`xrandr --output eDP-1 --mode 1920x1080 --right-of HDMI-1 --output HDMI-1 --primary --mode 2560x1080`
-
-<br/>
+```bash
+xrandr --output eDP-1 --mode 1920x1080 --right-of HDMI-1 --output HDMI-1 --primary --mode 2560x1080
+```
 
 Lets break down
 --
