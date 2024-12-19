@@ -23,7 +23,17 @@ sudo nano /etc/dnsmasq.conf`
 ```
 
 Add the following configurations:
-```bash
+```julia
+# Generic configuration
+no-resolv
+domain-needed
+bogus-priv
+bind-interfaces
+
+# IP addresses to listen for dns requests
+listen-address=::1,127.0.0.1,192.168.20.7,10.100.8.7
+port=53
+
 # Specify the DNS domain for Kubernetes 
 domain=k8s.local  
 
@@ -32,7 +42,46 @@ address=/service1.k8s.local/192.168.20.7
 address=/ingress.k8s.local/192.168.20.7  
 	
 # Forward other DNS queries to an external DNS server 
-server=8.8.8.8
+server=1.1.1.1
+```
+
+**Option 1: Use a Separate File for DNS Entries**
+	
+1. **Create a DNS Entries File**:  
+	Create a file `/etc/dnsmasq.d/custom_hosts.conf` with your DNS entries in the following format:
+	    
+```bash
+address=/app1.k8s.local/192.168.20.10 
+address=/app2.k8s.local/192.168.20.11 
+address=/app3.k8s.local/192.168.20.12
+	
+# Add more entries as needed...
+```
+	    
+2. **Update `dnsmasq.conf`**:  
+	Add this line to `/etc/dnsmasq.conf`:
+```bash
+conf-file=/etc/dnsmasq.d/custom_hosts.conf
+``` 
+
+**Option 2: Use a Database Backend (Advanced)**
+	
+1. **Dynamic Entry Generator Script**:
+	Use a script that queries the database and generates a file in `dnsmasq` format:
+	        
+```bash
+# Example script (generate_dns_entries.sh)
+#!/bin/bash
+
+mysql -u user -p -D dnsdb -e "SELECT hostname, ip FROM dns_entries" | \ awk '{print "address=/" $1 "/" $2}' > /etc/dnsmasq.d/custom_hosts.conf  
+
+systemctl reload dnsmasq
+```
+	        
+2. **Schedule the Script**:  
+	Use a cron job to run the script periodically:
+```bash
+*/5 * * * * /path/to/generate_dns_entries.sh
 ```
 
 **3. Restart Dnsmasq**:
