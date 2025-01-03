@@ -117,3 +117,63 @@ $ sudo brctl addif br0 enp0s3.100
 ```bash
 $ sudo ip addr add 192.168.0.1/24 dev br0
 ```
+
+___
+
+## Creating Interface Type 'bond'
+
+Bond modes overview:
+
+|**Mode**|**Description**|**Use Case**|
+|--|--|--|
+|`balance-rr`|Round-robin load balancing|High throughput|
+|`active-backup`|Failover, only one active|Redundancy (default)|
+|`balance-xor`|Transmit based on hashing|Performance & failover|
+|`802.3ad`|LACP (Link Aggregation)|Switch support required|
+|`broadcast`|Sends on all interfaces|High availability|
+|`balance-tlb`|Adaptive transmit load|NIC driver-specific|
+|`balance-alb`|Adaptive load balancing|NIC driver-specific|
+
+The bond module must be loaded:
+```bash
+$ sudo modprobe bonding
+$ echo "bonding" | sudo tee -a /etc/modulesecho "bonding" | sudo tee -a /etc/modules
+```
+
+The basic syntax is as follows:
+```bash
+$ ip link add <bond_interface_name> type bond
+```
+
+Create bond interface:
+```bash
+$ sudo ip link add bond0 type bond
+```
+
+Configure bonding mode and options:
+```bash
+$ echo "+eth0" | sudo tee /sys/class/net/bond0/bonding/slaves
+$ echo "+eth1" | sudo tee /sys/class/net/bond0/bonding/slaves
+$ echo "active-backup" | sudo tee /sys/class/net/bond0/bonding/mode
+$ echo "100" | sudo tee /sys/class/net/bond0/bonding/miimon
+```
+
+Bring up interface and bond
+```bash
+$ sudo ip link set eth0 down
+$ sudo ip link set eth1 down
+$ sudo ip link set eth0 master bond0
+$ sudo ip link set eth1 master bond0
+$ sudo ip link set bond0 up
+```
+
+Assign Mac and IP address
+```bash
+$ sudo ip link set address 00:11:22:33:44:55 dev bond0
+$ sudo ip addr add 192.168.100.150/24 dev bond0 sudo ip route add default via 192.168.100.1
+```
+
+Check bond status
+```bash
+$ cat /proc/net/bonding/bond0
+```
