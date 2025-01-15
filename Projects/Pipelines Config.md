@@ -1,5 +1,5 @@
 ```yaml
-image: node:16
+image: node:23
 
 pipelines:
   branches:
