@@ -1,3 +1,5 @@
+### **Step 1: Load Module Interface on Kernel**
+
 Module purpose
 
 |**Module**|**Description**|**Use Case**|
@@ -63,3 +65,59 @@ dmesg | grep macvlan
 dmesg | grep bridge
 dmesg | grep bonding
 ```
+
+---
+
+### **Step 2: Ensure Interface is Created and Available at Boot**
+
+Create a udev rule to ensure the `kube0` dummy interface is created and available at boot.
+
+#### **Create Udev Rule File**
+
+```bash
+sudo nano /etc/udev/rules.d/99-dummy-kube0.rules
+```
+
+#### **Add the Following Rule**
+
+```bash
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="dummy*", ATTR{name}=="kube0", RUN+="/sbin/ip link add kube0 type dummy"
+```
+
+### **Step 3: Ensure Interface Creation at Boot**
+
+Since `netplan` may not create the `kube0` dummy interface by itself, we can ensure it's created persistently using a systemd service.
+
+Create a new systemd service to set up the dummy interface at boot:
+
+```bash
+sudo nano /etc/systemd/system/setup-dummy-kube0.service
+```
+
+Add the following content:
+
+```bash
+[Unit]
+Description=Setup dummy network interface kube0
+After=network-pre.target
+Before=network-online.target
+
+[Service]
+ExecStart=/sbin/ip link add kube0 type dummy
+ExecStart=/sbin/ip link set kube0 up
+ExecStart=/sbin/ip addr add 192.168.100.150/24 dev kube0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Enable and start the service:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable setup-dummy-kube0.service
+sudo systemctl start setup-dummy-kube0.service
+```
+
+---
