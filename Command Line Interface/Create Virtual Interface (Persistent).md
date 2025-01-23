@@ -103,13 +103,35 @@ After=network-pre.target
 Before=network-online.target
 
 [Service]
-ExecStart=/sbin/ip link add kube0 type dummy
-ExecStart=/sbin/ip link set kube0 up
-ExecStart=/sbin/ip addr add 192.168.100.150/24 dev kube0
+# Cannot support mulitple ExecStart
+# ExecStart=/sbin/ip link add kube0 type dummy
+# ExecStart=/sbin/ip link set kube0 up
+# ExecStart=/sbin/ip addr add 192.168.100.150/24 dev kube0
+ExecStart=/bin/bash -c '/sbin/ip link add kube0 type dummy && /sbin/ip link set kube0 up && /sbin/ip addr add 192.168.100.150/24 dev kube0'
+
 RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
+
+---
+
+[Unit]
+Description=Setup dummy network interface kube0
+After=network-pre.target
+Before=network-online.target
+
+[Service]
+Type=oneshot # executed only once
+# ExecStart=/bin/bash -c '/sbin/ip link add kube0 type dummy && /sbin/ip link set kube0 up && /sbin/ip addr add 192.168.100.150/24 dev kube0'
+# ExecStart=/bin/bash -c '/sbin/ip link show kube0 > /dev/null 2>&1 && echo "Interface kube0 already exists, skipping creation." || (echo "Creating dummy interface kube0..." && /sbin/ip link add kube0 type dummy && /sbin/ip link set kube0 up && /sbin/ip addr add 192.168.100.150/24 dev kube0)'
+ExecStart=/bin/bash -c '/sbin/ip link show kube0 > /dev/null 2>&1 || (/sbin/ip link add kube0 type dummy && /sbin/ip link set kube0 up && /sbin/ip addr add 192.168.100.150/24 dev kube0)'
+
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
 ```
 
 Enable and start the service:
