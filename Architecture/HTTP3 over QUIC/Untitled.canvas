@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"7216e0b4e46cc77d","x":-109,"y":-209,"width":250,"height":60,"type":"text","text":"Client"},
+		{"id":"cb137f379c730f87","x":340,"y":-209,"width":250,"height":60,"type":"text","text":"API Gateway"},
+		{"id":"bbdb4d477b51ffbf","type":"text","text":"Microservice","x":740,"y":-209,"width":250,"height":60},
+		{"id":"5b3b9eb245697a58","x":740,"y":-400,"width":250,"height":60,"type":"text","text":"Microservice"},
+		{"id":"f196f322705a14c1","type":"text","text":"Microservice","x":740,"y":-20,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"3de2e0adace44f4d","fromNode":"7216e0b4e46cc77d","fromSide":"right","toNode":"cb137f379c730f87","toSide":"left"},
+		{"id":"293554520827456f","fromNode":"cb137f379c730f87","fromSide":"right","toNode":"5b3b9eb245697a58","toSide":"left"},
+		{"id":"99a36bb1955f611d","fromNode":"cb137f379c730f87","fromSide":"right","toNode":"bbdb4d477b51ffbf","toSide":"left"},
+		{"id":"687b6be56e77d3f6","fromNode":"cb137f379c730f87","fromSide":"right","toNode":"f196f322705a14c1","toSide":"left"},
+		{"id":"6bfd2612a2554d20","fromNode":"f196f322705a14c1","fromSide":"right","toNode":"bbdb4d477b51ffbf","toSide":"right"},
+		{"id":"566aab1c824def7e","fromNode":"bbdb4d477b51ffbf","fromSide":"right","toNode":"5b3b9eb245697a58","toSide":"right"},
+		{"id":"9dbed8e1b50d195f","fromNode":"5b3b9eb245697a58","fromSide":"bottom","toNode":"bbdb4d477b51ffbf","toSide":"top"},
+		{"id":"d71ac09422fb5ddf","fromNode":"bbdb4d477b51ffbf","fromSide":"bottom","toNode":"f196f322705a14c1","toSide":"top"}
+	]
+}
