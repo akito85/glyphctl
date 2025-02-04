@@ -1,2 +1,6 @@
+.obsidian/*.*
 .obsidian/workspace.json
 .obsidian/app.json
+.obsidian/core-plugins.json
+
+
