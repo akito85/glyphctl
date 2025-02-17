@@ -1,3 +1,3 @@
 ```bash
-git config core.fileMode false
+git --global config core.fileMode false
 ```
