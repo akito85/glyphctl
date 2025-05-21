@@ -4,22 +4,17 @@
 
 ##### Add the Kubernetes repository
 ```bash
-KUBE_V=v1.31
-curl -fsSL https://pkgs.k8s.io/core:/stable:/$KUBE_V/deb/Release.key | 
-	sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-
-echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/$KUBE_V/deb/ /" |
-    sudo tee /etc/apt/sources.list.d/kubernetes.list
+KUBE_V=v1.33
+curl -fsSL https://pkgs.k8s.io/core:/stable:/$KUBE_V/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/$KUBE_V/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 ##### Add the CRI-O repository
 ```bash
-CRIO_V=v1.31
-curl -fsSL https://pkgs.k8s.io/addons:/cri-o:/stable:/$CRIO_VERSION/deb/Release.key |
-    sudo gpg --dearmor -o /etc/apt/keyrings/cri-o-apt-keyring.gpg
+CRIO_V=v1.33
+curl -fsSL https://download.opensuse.org/repositories/isv:/cri-o:/stable:/$CRIO_V/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/cri-o-apt-keyring.gpg
 
-echo "deb [signed-by=/etc/apt/keyrings/cri-o-apt-keyring.gpg] https://pkgs.k8s.io/addons:/cri-o:/stable:/$CRIO_V/deb/ /" |
-    sudo tee /etc/apt/sources.list.d/cri-o.list
+echo "deb [signed-by=/etc/apt/keyrings/cri-o-apt-keyring.gpg] https://download.opensuse.org/repositories/isv:/cri-o:/stable:/$CRIO_V/deb/ /" | tee /etc/apt/sources.list.d/cri-o.list
 ```
 
 ##### Install the packages
