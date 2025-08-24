@@ -2,7 +2,7 @@
 	"nodes":[
 		{"id":"a0e3c07b7a92d9d1","type":"text","text":"CLUSTER","x":-440,"y":-60,"width":250,"height":51},
 		{"id":"4971ab0d1d82368d","type":"text","text":"INGRESS","x":-120,"y":-60,"width":250,"height":51},
-		{"id":"0c6f926b6dbc0c03","x":-120,"y":149,"width":250,"height":51,"type":"text","text":"REVERSE PROXY"},
+		{"id":"0c6f926b6dbc0c03","type":"text","text":"REVERSE PROXY","x":-120,"y":149,"width":250,"height":51},
 		{"id":"db7255d6397ea2b6","type":"text","text":"CLIENT","x":-780,"y":-60,"width":250,"height":51},
 		{"id":"5fbc1940c1209d97","type":"text","text":"CLIENT","x":-780,"y":149,"width":250,"height":51},
 		{"id":"7651997eb00e2864","type":"text","text":"SERVICE","x":220,"y":40,"width":250,"height":51},
